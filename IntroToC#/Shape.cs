@@ -1,25 +1,35 @@
 ﻿namespace IntroToC_
 {
-    internal class Shape
+    abstract class Shape
     {
-        public static double GetArea(string name, double length1 = 0, double length2 = 0)
+        public string Name { get; set; }
+        //Non Abstract method in abstract class
+        public virtual void GetInfo()
         {
-            if (String.Equals("rectangle", name, StringComparison.OrdinalIgnoreCase))
-            {
-                return length1 * length2;
-            }
-            else if (String.Equals("square", name, StringComparison.OrdinalIgnoreCase))
-            {
-                return Math.Pow(length1, 2);
-            }
-            else if (String.Equals("triangle", name, StringComparison.OrdinalIgnoreCase))
-            {
-                return length1 * (length2 / 2);
-            }
-            else
-            {
-                return -1;
-            }
+            Console.WriteLine($"This is {Name}");
         }
+        //Abstract method in abstract class
+        public abstract double Area();
     }
 }
+//Call from Program's Main
+//Shape[] shapes = { new Circle(5), new Rectangle(5, 10) };
+//foreach (Shape s in shapes)
+//{
+//    s.GetInfo();
+//    Console.WriteLine("{0} Area is {1:f2}", s.Name, s.Area());
+
+//    Circle testCirc = s as Circle;
+//    if (testCirc == null)
+//    {
+//        Console.WriteLine("The shape is not Circle");
+//    }
+
+//    if (s is Circle)
+//    {
+//        Console.WriteLine("The shape is not Rectangle");
+//    }
+//}
+//Object circ1 = new Circle(5);
+//Circle circ2 = (Circle)circ1;
+//Console.WriteLine($"The Area of {circ2.Name} is {circ2.Area()}");

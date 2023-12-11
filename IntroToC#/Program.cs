@@ -1,6 +1,5 @@
 ﻿using System.Globalization;
 using System.Text;
-
 class Program
 {
     public void StringFunction()
@@ -211,12 +210,12 @@ class Program
         PaintCar(cc);
     }
 
-    struct Rectangle
+    struct Rectangles
     {
         public double length;
         public double breadth;
 
-        public Rectangle(double l = 1, double b = 1)
+        public Rectangles(double l = 1, double b = 1)
         {
             length = l;
             breadth = b;
@@ -226,16 +225,30 @@ class Program
             return length * breadth;
         }
     }
+
+    public void NullableTypeDemo()
+    {
+        int? randNumber = null;
+        if (randNumber == null)
+        {
+            Console.WriteLine("randNumber is NULL");
+        }
+        if (!randNumber.HasValue)
+        {
+            Console.WriteLine("randNumber is NULL");
+        }
+        //Rectangles rect1;
+        //rect1.length = 200;
+        //rect1.breadth = 100;
+        //Console.WriteLine("The Area is {0} ", rect1.Area());
+        //Rectangles rect2 = new Rectangle(100, 50);
+        //rect2 = rect1;
+        //rect1.length = 100;
+        //Console.WriteLine("The length of rect2 is {0}", rect2.length);
+    }
     static void Main(String[] args)
     {
-        Rectangle rect1;
-        rect1.length = 200;
-        rect1.breadth = 100;
-        Console.WriteLine("The Area is {0} ", rect1.Area());
-        Rectangle rect2 = new Rectangle(100, 50);
-        rect2 = rect1;
-        rect1.length = 100;
-        Console.WriteLine("The length of rect2 is {0}", rect2.length);
+
     }
 
 }

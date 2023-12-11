@@ -6,7 +6,7 @@
     <RootNamespace>IntroToC_</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Program</StartupObject>
+    <StartupObject>IntroToC_.Warrior.Program</StartupObject>
   </PropertyGroup>
 
 </Project>
